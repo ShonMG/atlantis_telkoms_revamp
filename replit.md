@@ -27,6 +27,7 @@ The application follows a monorepo structure with clear separation between clien
 - **Animations**: Framer Motion for smooth transitions and interactions
 - **Form Handling**: React Hook Form with Zod validation
 - **Icons**: Lucide React and React Icons
+- **Routing**: Wouter for client-side routing with dedicated About page
 
 ### Backend Architecture
 - **Web Framework**: Express.js with TypeScript
@@ -54,11 +55,13 @@ The application uses a comprehensive set of reusable UI components including:
    - Success/error feedback displayed via toast notifications
 
 2. **Page Navigation**:
-   - Single-page application with smooth scrolling between sections
-   - Navbar highlights active section based on scroll position
+   - Multi-page application with smooth scrolling between sections on home page
+   - Dedicated About page with comprehensive team information
+   - Navbar highlights active section/page and handles cross-page navigation
 
 3. **Content Management**:
    - Static content managed through React components
+   - Team profiles with professional photos and detailed descriptions
    - Dynamic styling with Tailwind CSS custom properties
    - Responsive design with mobile-first approach
 

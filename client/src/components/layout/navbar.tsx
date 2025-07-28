@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Satellite, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,19 +19,39 @@ export default function Navbar() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    // If we're not on the home page, navigate to home first
+    if (location !== "/") {
+      setLocation("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleNavigation = (path: string, sectionId?: string) => {
+    if (sectionId) {
+      scrollToSection(sectionId);
+    } else {
+      setLocation(path);
       setIsMobileMenuOpen(false);
     }
   };
 
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "services", label: "Services" },
-    { id: "portfolio", label: "Portfolio" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: "Home", path: "/" },
+    { id: "about", label: "About", path: "/about" },
+    { id: "services", label: "Services", sectionId: "services" },
+    { id: "portfolio", label: "Portfolio", sectionId: "portfolio" },
+    { id: "contact", label: "Contact", sectionId: "contact" },
   ];
 
   return (
@@ -47,7 +69,7 @@ export default function Navbar() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => scrollToSection("home")}
+            onClick={() => setLocation("/")}
           >
             <div className="w-10 h-10 tech-gradient rounded-xl flex items-center justify-center">
               <Satellite className="text-white text-lg" />
@@ -63,8 +85,12 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
+                onClick={() => handleNavigation(item.path || "/", item.sectionId)}
+                className={`transition-colors duration-300 font-medium ${
+                  (item.path && location === item.path) || (item.sectionId && location === "/")
+                    ? "text-primary"
+                    : "text-gray-700 hover:text-primary"
+                }`}
               >
                 {item.label}
               </motion.button>
@@ -106,8 +132,12 @@ export default function Navbar() {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-gray-700 hover:text-primary transition-colors duration-300 font-medium py-2"
+                onClick={() => handleNavigation(item.path || "/", item.sectionId)}
+                className={`block w-full text-left transition-colors duration-300 font-medium py-2 ${
+                  (item.path && location === item.path) || (item.sectionId && location === "/")
+                    ? "text-primary"
+                    : "text-gray-700 hover:text-primary"
+                }`}
               >
                 {item.label}
               </button>
