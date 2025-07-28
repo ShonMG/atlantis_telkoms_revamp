@@ -95,18 +95,7 @@ export default function Navbar() {
                 {item.label}
               </motion.button>
             ))}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="bg-primary text-white hover:bg-secondary transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Button>
-            </motion.div>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -142,12 +131,7 @@ export default function Navbar() {
                 {item.label}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="w-full bg-primary text-white hover:bg-secondary transition-all duration-300 mt-4"
-            >
-              Get Started
-            </Button>
+
           </div>
         </motion.div>
       </div>
