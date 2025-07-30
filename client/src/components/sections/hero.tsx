@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Rocket, Calendar, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import team from "../../images/atlantis_4.jpg";
+import hero_section from "../../images/integrated_ai.jpg";
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -22,7 +23,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 parallax-bg">
         <img
-          src="https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&h=1380"
+          src={team}
           alt="Modern African technology scene"
           className="w-full h-full object-cover"
         />
@@ -112,7 +113,7 @@ export default function Hero() {
           >
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                src={hero_section}
                 alt="African technology innovation"
                 className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
               />

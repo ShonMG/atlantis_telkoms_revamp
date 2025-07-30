@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Satellite, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
+import logo from "../../images/logo.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,10 +72,8 @@ export default function Navbar() {
             className="flex items-center space-x-3 cursor-pointer"
             onClick={() => setLocation("/")}
           >
-            <div className="w-10 h-10 tech-gradient rounded-xl flex items-center justify-center">
-              <Satellite className="text-white text-lg" />
-            </div>
-            <span className="text-xl font-bold text-gray-800">Atlantis Telkoms</span>
+             <img src={logo} alt="Logo" className="h-24 w-auto rounded" />
+            
           </motion.div>
 
           {/* Desktop Menu */}

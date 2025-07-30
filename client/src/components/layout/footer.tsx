@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Satellite, MapPin, Phone, Mail } from "lucide-react";
 import { SiFacebook, SiX, SiLinkedin, SiInstagram } from "react-icons/si";
+import logo from "../../images/logo.png";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -36,9 +37,6 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               className="flex items-center space-x-3 mb-6"
             >
-              <div className="w-12 h-12 tech-gradient rounded-xl flex items-center justify-center">
-                <Satellite className="text-white text-xl" />
-              </div>
               <span className="text-2xl font-bold">Atlantis Telkoms</span>
             </motion.div>
             <motion.p

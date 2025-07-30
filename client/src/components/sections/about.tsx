@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Target, Eye, Heart } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import ceo from "../../images/ceo.jpg";
 
 export default function About() {
   const ref = useRef(null);
@@ -57,7 +58,7 @@ export default function About() {
         >
           <motion.div variants={itemVariants}>
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              src={ceo}
               alt="Agnes Wanjiru Mwangi - CEO and Founder"
               className="rounded-2xl shadow-xl hover-lift"
             />
@@ -66,14 +67,14 @@ export default function About() {
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-800 mb-6">Our Story</h3>
             <p className="text-gray-600 leading-relaxed">
-              Founded in 2011 by visionary engineer Agnes Wanjiru Mwangi, Atlantis Telkoms Ltd emerged from a simple
-              frustration with outdated, fragile systems. What began as a mission to fix broken telephony systems has
-              evolved into a climate-tech powerhouse.
+              Atlantis Telkoms Ltd is a visionary ICT and AI innovation firm based in Nairobi, Kenya. Founded in 2011, 
+              we have built a reputation for delivering transformational, future-proof, and locally adaptable solutions across 
+              telecom, infrastructure, energy, and agriculture.With a strong foundation in structured cabling, surveillance, and
+              smart systems, we have evolved into a climate-tech powerhouse—blending artificial intelligence, renewable energy,
+              and inclusive design to power the next generation of African infrastructure.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Today, we blend artificial intelligence, renewable energy, and inclusive design to power the next
-              generation of African infrastructure, serving government bodies, financial institutions, and enterprises
-              across Kenya and beyond.
+              
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8">
@@ -88,7 +89,7 @@ export default function About() {
                 variants={itemVariants}
                 className="text-center p-4 bg-gray-50 rounded-xl hover-lift"
               >
-                <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                <div className="text-3xl font-bold text-primary mb-2">17+</div>
                 <div className="text-gray-600">Projects Delivered</div>
               </motion.div>
             </div>

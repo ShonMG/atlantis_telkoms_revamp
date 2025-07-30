@@ -13,65 +13,84 @@ export default function Portfolio() {
   const portfolioItems = [
     {
       id: 1,
-      category: "agriculture",
-      title: "Solar-Powered Farm Monitoring",
-      description: "Complete IoT implementation for greenhouse monitoring with solar power integration.",
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      category: "institutions",
+      title: "Kenya National Examinations Council (KNEC)",
+      description: "ICT infrastructure deployment for secure exam data transmission. Included structured cabling, VoIP setup, and high-density network centers for reliable communication and compliance.",
+      
       tag: "Agriculture",
       tagColor: "text-green-600 bg-green-100",
     },
     {
       id: 2,
-      category: "smart-home",
-      title: "Smart Estate Automation",
-      description: "Complete smart home integration for luxury residential development in Nairobi.",
-      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      tag: "Smart Home",
+      category: "saccos",
+      title: "Unaitais Sacco (2013 - Present)",
+      description:`Network point upgrades, structured cabling, and ICT support 
+                    across multiple branches (Githumu, Kangari, Gatura). Designed scalable network systems, optimized LAN/WAN architecture, and provided ongoing maintenance.`,
+      tag: "Saccos",
       tagColor: "text-blue-600 bg-blue-100",
     },
     {
       id: 3,
-      category: "enterprise",
+      category: "institutions",
       title: "Banking Infrastructure Upgrade",
-      description: "Complete network overhaul and security system implementation for Co-operative Bank.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      tag: "Enterprise",
+      description:  `Bank Transformation Waves 1 to 5 (2013–2016) Structured cabling and network upgrades for 40+ branches including Coop Trust, Coop House, and branches in Kiambu,Machakos, Thika, Digo,
+                     Nkurumah, Wakulima, Githurai, Zimmerman, Ruaka, TRM, Ruiru,Embakasi, Athi River, Kisumu,
+                      Mbale, Mbita, Yala, Malaba, Kimilili, Keroka, Nyamira, Mwingi,Wote, Kutus, Isiolo, Mwea,
+                       Siakago, Nyali, Kongowea, Voi, and Malindi. Projects included backbone fiber installations,
+                        switch configurations, CAT6/CAT6a cabling, and redundant failover designs. Improved uptime, performance, and customer satisfaction across the network.`,
+      tag: "Institutions",
       tagColor: "text-purple-600 bg-purple-100",
     },
     {
       id: 4,
-      category: "agriculture",
-      title: "AI-Powered Crop Analysis",
-      description: "Machine learning system for automated crop health monitoring and yield prediction.",
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      tag: "Agriculture",
+      category: "institutions",
+      title: "Technical University of Mombasa (TUM)",
+      description: "Campus-wide structured cabling and intercom network enabling real-time research, learning, and collaboration.",
+      tag: "Institutions",
       tagColor: "text-green-600 bg-green-100",
     },
     {
       id: 5,
-      category: "smart-home",
-      title: "Luxury Villa Automation",
-      description: "Full home automation system with voice control and mobile app integration.",
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      tag: "Smart Home",
+      category: "ai",
+      title: "Charge 24 AI Analytics",
+      description: ` AI Analytics for Smart Sensors &amp; Smart Screens AI-powered analytics transform ordinary sensors and digital screens into intelligent 
+                    systems capable of real-time decision-making, predictive insights, and adaptive responses. This solution, deployed for Charge 24, enhances both environmental monitoring and user interaction.`,
+      tag: "AI",
       tagColor: "text-blue-600 bg-blue-100",
     },
     {
       id: 6,
-      category: "enterprise",
-      title: "University Network Upgrade",
-      description: "Campus-wide network infrastructure and security system for Technical University of Mombasa.",
-      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      tag: "Enterprise",
+      category: "saccos",
+      title: "Stima SACCO & Elimu SACCO",
+      description: " Structured cabling, intercoms, CCTV, and biometric access projects with standardized security and network design across branches.",
+     
+      tag: "Saccos",
       tagColor: "text-purple-600 bg-purple-100",
     },
+    {
+      id: 6,
+      category: "saccos",
+      title: "Fundilima SACCO",
+      description: "Smart Gated Community Turnkey smart estate project integrating motion sensors, smart lights, access control, solar, and automation platforms.",
+     
+      tag: "Saccos",
+      tagColor: "text-purple-600 bg-purple-100",
+    },
+    {
+      id: 6,
+      category: "saccos",
+      title: "Kenya Forest Service (KFS)",
+      description: "Installed ruggedized ICT systems including solar CCTV and IP intercoms across regional forestry offices to improve data capture and HQ coordination.",
+      tag: "Institutions",
+      tagColor: "text-purple-600 bg-purple-100",
+    }
   ];
 
   const filters = [
     { id: "all", label: "All Projects" },
-    { id: "agriculture", label: "Agriculture" },
-    { id: "smart-home", label: "Smart Homes" },
-    { id: "enterprise", label: "Enterprise" },
+    { id: "ai", label: "AI" },
+    { id: "institutions", label: "Institutions" },
+    { id: "saccos", label: "Saccos" },
   ];
 
   const filteredItems = activeFilter === "all" 
@@ -158,13 +177,13 @@ export default function Portfolio() {
               variants={itemVariants}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift group"
             >
-              <div className="h-64 overflow-hidden">
+              {/* <div className="h-64 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-              </div>
+              </div> */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-4">{item.description}</p>

@@ -77,7 +77,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+254 769 481 793", "Available 24/7"],
+      details: ["+254 769 481 793"],
       gradient: "from-accent/5 to-yellow-300/5",
       iconBg: "bg-accent",
     },
@@ -214,6 +214,7 @@ export default function Contact() {
                       <SelectItem value="smart-home">Smart Home Automation</SelectItem>
                       <SelectItem value="enterprise-ict">Enterprise ICT Solutions</SelectItem>
                       <SelectItem value="consultation">Consultation</SelectItem>
+                      
                     </SelectContent>
                   </Select>
                 </div>

@@ -4,6 +4,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import ceo from "../images/ceo.jpg"
 
 export default function AboutPage() {
   const ref = useRef(null);
@@ -13,57 +14,38 @@ export default function AboutPage() {
     {
       name: "Agnes Wanjiru Mwangi",
       role: "CEO & Head Engineer",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      description: "A visionary engineer with over 14 years of experience in ICT infrastructure and smart automation. Agnes founded Atlantis Telkoms with a mission to transform Africa's technological landscape through innovative, sustainable solutions.",
+      image: "",
       expertise: ["CCNA & CCNP Certified", "Smart Automation", "AI Infrastructure", "Climate-Tech Solutions"],
       gradient: "from-primary/5 to-secondary/5",
       iconBg: "bg-primary",
     },
     {
-      name: "Samuel Kiprotich",
+      name: "Hansel",
       role: "Lead Systems Engineer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      description: "Samuel specializes in enterprise network infrastructure and security systems. With 10+ years of experience, he leads our technical implementation teams and ensures robust, scalable solutions for our clients.",
-      expertise: ["Network Security", "Enterprise ICT", "CCTV Systems", "Structured Cabling"],
+      image: "",
+      expertise: [],
       gradient: "from-accent/5 to-yellow-300/5",
       iconBg: "bg-accent",
     },
     {
-      name: "Mary Wanjiku",
-      role: "Smart Agriculture Specialist",
-      image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      description: "Mary leads our AgTech division, developing IoT solutions for modern farming. Her background in agricultural engineering and technology integration makes her instrumental in our smart farming initiatives.",
-      expertise: ["IoT Sensors", "Agricultural Engineering", "Solar Integration", "Data Analytics"],
+      name: "Brenda Mwaura",
+      role: "",
+      image: "",
+      description: "",
+      expertise: [""],
       gradient: "from-green-500/5 to-emerald-500/5",
       iconBg: "bg-green-500",
     },
     {
-      name: "David Mutinda",
-      role: "AI & Software Development Lead",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      description: "David drives our AI initiatives and software development projects. He specializes in machine learning applications for predictive maintenance and intelligent automation systems.",
-      expertise: ["Machine Learning", "Predictive Analytics", "Software Architecture", "AI Automation"],
+      name: "Brian Limo",
+      role: "",
+      image: "",
+      description: "",
+      expertise: [],
       gradient: "from-purple-500/5 to-blue-500/5",
       iconBg: "bg-purple-500",
     },
-    {
-      name: "Grace Akinyi",
-      role: "Project Manager & Client Relations",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      description: "Grace oversees project delivery and maintains client relationships. Her expertise in project management ensures timely delivery and client satisfaction across all our technology implementations.",
-      expertise: ["Project Management", "Client Relations", "Quality Assurance", "Business Development"],
-      gradient: "from-pink-500/5 to-rose-500/5",
-      iconBg: "bg-pink-500",
-    },
-    {
-      name: "James Ochieng",
-      role: "Solar & Renewable Energy Engineer",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      description: "James leads our renewable energy solutions, specializing in solar installations and off-grid power systems. His expertise ensures sustainable, reliable power for all our technology deployments.",
-      expertise: ["Solar Installation", "Off-grid Systems", "Energy Storage", "Sustainable Design"],
-      gradient: "from-orange-500/5 to-red-500/5",
-      iconBg: "bg-orange-500",
-    },
+    
   ];
 
   const containerVariants = {
@@ -119,7 +101,7 @@ export default function AboutPage() {
           >
             <motion.div variants={itemVariants}>
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                src={ceo}
                 alt="Agnes Wanjiru Mwangi - CEO and Founder"
                 className="rounded-2xl shadow-xl hover-lift"
               />
@@ -128,15 +110,20 @@ export default function AboutPage() {
             <motion.div variants={itemVariants} className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
               <p className="text-gray-600 leading-relaxed">
-                Founded in 2011 by visionary engineer Agnes Wanjiru Mwangi, Atlantis Telkoms Ltd emerged from a simple
-                frustration with outdated, fragile systems. What began as a mission to fix broken telephony systems has
-                evolved into a climate-tech powerhouse.
+                
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Fourteen years ago, our founder was assigned to maintain analog PABX systems at a major bank. Every time
-                someone touched a wire, the entire system would glitch, bringing operations to a halt. This experience
-                sparked a vision: to build systems that are not just functional, but resilient, intelligent, and sustainable.
-              </p>
+                Fourteen years ago, I founded Atlantis Telkoms Ltd with a clear vision: to integrate technology and intelligence into the very fabric of our lives—transforming homes, businesses, and communities across Kenya.
+
+The idea was born out of frustration. Back then, I was assigned to a major bank to maintain their analog PABX system and messy telephony wiring. Every time someone so much as touched a wire, the entire system would glitch—bringing operations to a halt and prompting desperate calls to tech support. It was clear: systems weren’t just outdated; they were fragile, inefficient, and totally unsustainable.
+
+What began as a one-woman mission to fix broken systems has since grown into a respected player in the tech and security space. Atlantis Telkoms has delivered high-impact solutions for government bodies, financial institutions, universities, Saccos, and private enterprises—including Co-operative Bank of Kenya, Kenya National Examination Council, Elimu Sacco, Unaitas, and the Technical University of Mombasa. Each project reaffirmed our commitment to building solutions that are not just smart — but resilient and reliable.
+
+With certifications in CCNA, CCNP, and Computer Systems & Applications, I bring a strong technical foundation and hands-on experience in ICT infrastructure, smart automation, and electronic security. But what drives me isn’t just the tech — it’s the belief that intelligent systems can truly transform how people live and work.
+
+Today, Atlantis Telkoms is building the future with AI-powered platforms, predictive maintenance systems, and smart infrastructure that anticipates needs before problems arise. We’re not just adapting to innovation — we’re driving it.
+
+Whether you're a visionary client, a strategic partner, or a fellow changemaker, I’m always open to collaborating with those who believe in creating a future anchored in trust, purpose, and transformation.</p>
               <p className="text-gray-600 leading-relaxed">
                 Today, we blend artificial intelligence, renewable energy, and inclusive design to power the next
                 generation of African infrastructure, serving government bodies, financial institutions, and enterprises
@@ -155,7 +142,7 @@ export default function AboutPage() {
                   variants={itemVariants}
                   className="text-center p-4 bg-gray-50 rounded-xl hover-lift"
                 >
-                  <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">17+</div>
                   <div className="text-gray-600">Projects Delivered</div>
                 </motion.div>
               </div>

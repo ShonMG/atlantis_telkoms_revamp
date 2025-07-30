@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { Sprout, Home, Network, CheckCircle } from "lucide-react";
+import { Sprout, Home, Network, CheckCircle, Zap, BrainCircuit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Description } from "@radix-ui/react-toast";
+import ai from "../../images/AI.webp";
 
 export default function Services() {
   const ref = useRef(null);
@@ -13,44 +15,80 @@ export default function Services() {
       icon: Sprout,
       title: "Smart Agriculture (AgTech)",
       description: "Revolutionary farming solutions powered by IoT, AI, and renewable energy.",
-      image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradient: "from-green-400 to-green-600",
       features: [
-        "IoT Sensors for monitoring",
-        "Automated irrigation systems",
-        "AI-driven diagnostics",
-        "Solar-powered solutions",
+        "IoT Sensors for poultry and greenhouse monitoring (gas, temperature, humidity)",
+        "Automated irrigation and misting systems",
+        "GSM-powered alerts and data dashboards",
+        "Off-grid solar installations for sustainable farming",
+        "Drone-enabled smart mapping and analytics",
+        "Live demo support & farmer training"
       ],
       buttonColor: "from-green-500 to-green-600",
     },
     {
       icon: Home,
-      title: "Smart Home Automation",
+      title: "Smart Home & Estate Automation",
       description: "Transform your living space with intelligent automation and security systems.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradient: "from-blue-400 to-blue-600",
       features: [
-        "Voice-controlled automation",
-        "Security & access control",
-        "Smart lighting & curtains",
-        "Estate management platforms",
+        "Voice-controlled home automation (via Siri & Google Assistant)",
+        "Gate automation, curtain control, and smart lights",
+        "Robotic vacuum integration",
+        "Piped music systems",
+        "Intrusion detection and real-time alerts",
+        "Solar street lighting, garden fairy lights",
+        "Integrated estate management platforms"
       ],
       buttonColor: "from-blue-500 to-blue-600",
     },
     {
       icon: Network,
-      title: "Telecom & Enterprise ICT",
+      title: "Telecom & Enterprise ICT Solutions",
       description: "Enterprise-grade communication and networking solutions for modern businesses.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       gradient: "from-purple-400 to-purple-600",
       features: [
-        "Structured cabling systems",
-        "IP telephony solutions",
-        "CCTV & surveillance systems",
-        "Network infrastructure",
+        "SStructured cabling (Cat6/6a/7, Fiber)",
+        "Network infrastructure audits & upgrades",
+        "IP telephony, intercoms, & access control",
+        "CCTV Surveillance (IP-enabled, solar-ready)",
+        "Alarm Systems &amp; Fire Detection",
+        "Smart kiosks, digital displays & content management",
+        "Hybrid (AC + Solar) infrastructure design"
       ],
       buttonColor: "from-purple-500 to-purple-600",
     },
+    {
+      icon: Zap,
+      title: "Renewable Energy & Solar Solutions",
+      description: "We light up tomorrow with clean, sustainable energy systems",
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      gradient: "from-blue-400 to-blue-600",
+      features: [
+        "Solar Street Lighting: Intelligent dusk-to-dawn lights with motion sensors",
+        "Flower Fairy Garden Lights: Aesthetic, solar-powered path lighting",
+        "Off-grid Solar Power: Inverter systems, charge controllers, and lithium-ion batteries",
+        "Solar Water Pumps: Ideal for borehole and agricultural irrigation"
+      ],
+      buttonColor: "from-yellow-500 to-yellow-600",
+    },
+    {
+      icon: BrainCircuit,
+      title: "Integrated AI Platforms",
+      description: "All our services converge under one AI-powered umbrella. This integrated intelligence coordinates all systems into a user-centric interface",
+      image: ai,
+      gradient: "from-blue-400 to-blue-600",
+      features: [
+        "One Dashboard, All Systems: Control security, energy, automation, and more",
+        "Real-Time Monitoring: Status reports, analytics, and performance updates",
+        "Remote Access & Alerts: Instant notifications and mobile command functions",
+        "Automated Triggers: Environmental and behavior-based logic sets"
+      ],
+      buttonColor: "from-blue-500 to-blue-600",
+    }
   ];
 
   const containerVariants = {

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { SiAnswer } from "react-icons/si";
 
 export default function FAQ() {
   const ref = useRef(null);
@@ -11,21 +12,25 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "What makes Atlantis Telkoms different from other ICT companies?",
-      answer: "We specialize in Africa-specific solutions that combine AI, renewable energy, and local insights. Our 14+ years of experience and focus on sustainable, inclusive technology sets us apart in the market.",
+      question: "Can I control all my systems using one app?",
+      answer: "Yes! Our AI platform integrates lighting, security, intercoms, energy, and automation into one intuitive dashboard.",
     },
     {
-      question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes, we provide comprehensive support packages including predictive maintenance using AI, 24/7 monitoring, and regular system updates to ensure optimal performance.",
+      question: "Do you operate outside Nairobi?",
+      answer: "Absolutely. We serve clients nationwide, including Mombasa, Murang’a, Kiambu, and rural counties.",
     },
     {
-      question: "Can your solutions work in remote areas with limited infrastructure?",
-      answer: "Absolutely! Our solutions are designed for Africa's unique challenges. We specialize in off-grid solar installations, satellite connectivity, and GSM-powered systems that work reliably in remote locations.",
+      question: "Do your products come with warranty and support?",
+      answer: "Yes. We offer product warranties, installation guarantees, and long-term maintenance plans.",
     },
     {
-      question: "What is the typical timeline for implementing a smart agriculture solution?",
-      answer: "Implementation typically takes 2-6 weeks depending on the scope. This includes site assessment, sensor installation, solar setup, system configuration, and comprehensive farmer training.",
+      question: "How secure is the data in smart systems?",
+      answer: "We use encrypted platforms with secure data handling policies. All systems comply with international data protection standards."
     },
+    {
+      question: "Can you deploy smart systems in off-grid locations?",
+      answer: "Yes. Our solar-powered infrastructure is ideal for off-grid homes, schools, farms, and estates."
+    }
   ];
 
   const containerVariants = {
