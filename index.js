@@ -85,6 +85,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 var vite_config_default = defineConfig({
+  base: "/atlantis_telkoms_revamp/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
