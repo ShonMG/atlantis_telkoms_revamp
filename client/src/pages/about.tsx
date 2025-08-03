@@ -4,7 +4,12 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
-import ceo from "../images/ceo.jpg"
+import agnes from "../images/agnes_ceo.jpg";
+import brenda from "../images/brenda_mwaura.jpg";
+import charles from "../images/charles.jpg";
+import hansel from "../images/hansel_ndemange.jpg";
+import brian from "../images/limo_brian.jpg";
+
 
 export default function AboutPage() {
   const ref = useRef(null);
@@ -14,36 +19,54 @@ export default function AboutPage() {
     {
       name: "Agnes Wanjiru Mwangi",
       role: "CEO & Head Engineer",
-      image: "",
+      image: agnes,
       expertise: ["CCNA & CCNP Certified", "Smart Automation", "AI Infrastructure", "Climate-Tech Solutions"],
       gradient: "from-primary/5 to-secondary/5",
       iconBg: "bg-primary",
     },
     {
-      name: "Hansel",
-      role: "Lead Systems Engineer",
-      image: "",
-      expertise: [],
-      gradient: "from-accent/5 to-yellow-300/5",
-      iconBg: "bg-accent",
-    },
-    {
       name: "Brenda Mwaura",
-      role: "",
-      image: "",
+      role: "Business Development & Operations Lead",
+      image: brenda,
       description: "",
       expertise: [""],
       gradient: "from-green-500/5 to-emerald-500/5",
       iconBg: "bg-green-500",
     },
     {
+      name: "Hansel Ndemange",
+      role: "Team Lead incharge of Software Development",
+      image: hansel,
+      expertise: ["React", "Django", "Flutter", "ReactNative"],
+      gradient: "from-accent/5 to-yellow-300/5",
+      iconBg: "bg-accent",
+    },
+    {
       name: "Brian Limo",
-      role: "",
-      image: "",
+      role: "Software Developer",
+      image: brian,
       description: "",
-      expertise: [],
+      expertise: ["Fullstack", "Backend"],
       gradient: "from-purple-500/5 to-blue-500/5",
       iconBg: "bg-purple-500",
+    },
+    {
+      name: "Charles Moruri",
+      role: "ML Engineer",
+      Image: charles,
+      description:"",
+      expertise: ["AI", "Python", "AWS"],
+      gradient: "",
+      iconBg: "bg-red-500",
+    },
+    {
+      name: "Gerishon Magachi",
+      role: "Web Infrastructure & Digital Tools Analyst",
+      Image: "",
+      description:"",
+      expertise: ["Python", "React", "Typescript"],
+      gradient: "from-blue-500/5 to-blue-500/5",
+      iconBg: "bg-blue-500",
     },
     
   ];
@@ -101,7 +124,7 @@ export default function AboutPage() {
           >
             <motion.div variants={itemVariants}>
               <img
-                src={ceo}
+                src={agnes}
                 alt="Agnes Wanjiru Mwangi - CEO and Founder"
                 className="rounded-2xl shadow-xl hover-lift"
               />
@@ -142,7 +165,7 @@ Whether you're a visionary client, a strategic partner, or a fellow changemaker,
                   variants={itemVariants}
                   className="text-center p-4 bg-gray-50 rounded-xl hover-lift"
                 >
-                  <div className="text-3xl font-bold text-primary mb-2">17+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">120+</div>
                   <div className="text-gray-600">Projects Delivered</div>
                 </motion.div>
               </div>

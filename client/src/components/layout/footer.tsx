@@ -104,6 +104,10 @@ export default function Footer() {
                 +254 769 481 793
               </li>
               <li className="flex items-center">
+                <Phone className="mr-3 text-primary h-4 w-4" />
+                +254 705 976953
+              </li>
+              <li className="flex items-center">
                 <Mail className="mr-3 text-primary h-4 w-4" />
                 info@atlantistelkoms.com
               </li>

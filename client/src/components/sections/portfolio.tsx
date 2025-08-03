@@ -17,7 +17,7 @@ export default function Portfolio() {
       title: "Kenya National Examinations Council (KNEC)",
       description: "ICT infrastructure deployment for secure exam data transmission. Included structured cabling, VoIP setup, and high-density network centers for reliable communication and compliance.",
       
-      tag: "Agriculture",
+      tag: "Education",
       tagColor: "text-green-600 bg-green-100",
     },
     {
@@ -25,20 +25,20 @@ export default function Portfolio() {
       category: "saccos",
       title: "Unaitais Sacco (2013 - Present)",
       description:`Network point upgrades, structured cabling, and ICT support 
-                    across multiple branches (Githumu, Kangari, Gatura). Designed scalable network systems, optimized LAN/WAN architecture, and provided ongoing maintenance.`,
+                    across multiple branches (Githumu, Kangari, Gatura, Embu, Gatindu, Cardinal Otunga, Mlolongo Branches among others). Offered structured cabling, cctvs, Biometrics, fire alarms,  Intruders, CCTV, and provided ongoing maintenance.`,
       tag: "Saccos",
       tagColor: "text-blue-600 bg-blue-100",
     },
     {
       id: 3,
       category: "institutions",
-      title: "Banking Infrastructure Upgrade",
+      title: "Cooperative Bank Branches Countrwide.",
       description:  `Bank Transformation Waves 1 to 5 (2013–2016) Structured cabling and network upgrades for 40+ branches including Coop Trust, Coop House, and branches in Kiambu,Machakos, Thika, Digo,
                      Nkurumah, Wakulima, Githurai, Zimmerman, Ruaka, TRM, Ruiru,Embakasi, Athi River, Kisumu,
                       Mbale, Mbita, Yala, Malaba, Kimilili, Keroka, Nyamira, Mwingi,Wote, Kutus, Isiolo, Mwea,
                        Siakago, Nyali, Kongowea, Voi, and Malindi. Projects included backbone fiber installations,
                         switch configurations, CAT6/CAT6a cabling, and redundant failover designs. Improved uptime, performance, and customer satisfaction across the network.`,
-      tag: "Institutions",
+      tag: "Banking",
       tagColor: "text-purple-600 bg-purple-100",
     },
     {
@@ -46,7 +46,7 @@ export default function Portfolio() {
       category: "institutions",
       title: "Technical University of Mombasa (TUM)",
       description: "Campus-wide structured cabling and intercom network enabling real-time research, learning, and collaboration.",
-      tag: "Institutions",
+      tag: "Education",
       tagColor: "text-green-600 bg-green-100",
     },
     {
@@ -68,22 +68,38 @@ export default function Portfolio() {
       tagColor: "text-purple-600 bg-purple-100",
     },
     {
-      id: 6,
+      id: 7,
       category: "saccos",
       title: "Fundilima SACCO",
-      description: "Smart Gated Community Turnkey smart estate project integrating motion sensors, smart lights, access control, solar, and automation platforms.",
+      description: "Smart Gated Community Turnkey smart estate project integrating motion sensors, smart lights, access control, solar, automation platforms, CCTV surveillance, Biometrics, Telephony and Structured Cabling..",
      
       tag: "Saccos",
       tagColor: "text-purple-600 bg-purple-100",
     },
     {
-      id: 6,
-      category: "saccos",
+      id: 8,
+      category: "institutions",
       title: "Kenya Forest Service (KFS)",
       description: "Installed ruggedized ICT systems including solar CCTV and IP intercoms across regional forestry offices to improve data capture and HQ coordination.",
-      tag: "Institutions",
+      tag: "Government",
       tagColor: "text-purple-600 bg-purple-100",
-    }
+    },
+    {
+      id: 9,
+      category: "institutions",
+      title: "Global Communities",
+      description: "Installed Structured Cabling Biometrics and cctvs",
+      tag: "NGO",
+      tagColor: "text-purple-600 bg-purple-100",
+    },
+    {
+      id: 10,
+      category: "real_estate",
+      title: "Welivia Apartments",
+      description: "Did Solar Power Installations",
+      tag: "Flat",
+      tagColor: "text-purple-600 bg-purple-100",
+    },
   ];
 
   const filters = [
@@ -91,6 +107,7 @@ export default function Portfolio() {
     { id: "ai", label: "AI" },
     { id: "institutions", label: "Institutions" },
     { id: "saccos", label: "Saccos" },
+    { id: "real_estate", label: "Real Estate"},
   ];
 
   const filteredItems = activeFilter === "all" 

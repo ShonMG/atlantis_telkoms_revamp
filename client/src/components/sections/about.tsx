@@ -89,7 +89,7 @@ export default function About() {
                 variants={itemVariants}
                 className="text-center p-4 bg-gray-50 rounded-xl hover-lift"
               >
-                <div className="text-3xl font-bold text-primary mb-2">17+</div>
+                <div className="text-3xl font-bold text-primary mb-2">120+</div>
                 <div className="text-gray-600">Projects Delivered</div>
               </motion.div>
             </div>

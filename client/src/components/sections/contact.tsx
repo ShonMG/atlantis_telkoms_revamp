@@ -10,6 +10,8 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useForm } from "@formspree/react";
+
 
 interface ContactFormData {
   name: string;
@@ -31,31 +33,87 @@ export default function Contact() {
     message: "",
   });
 
+  // const contactMutation = useMutation({
+  //   mutationFn: async (data: ContactFormData) => {
+  //     return await apiRequest("POST", "/api/contact", data);
+  //   },
+  //   onSuccess: () => {
+  //     toast({
+  //       title: "Message sent successfully!",
+  //       description: "Thank you for your message. We will get back to you soon.",
+  //     });
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       phone: "",
+  //       service: "",
+  //       message: "",
+  //     });
+  //   },
+  //   onError: () => {
+  //     toast({
+  //       title: "Error sending message",
+  //       description: "Please try again later.",
+  //       variant: "destructive",
+  //     });
+  //   },
+  // });
   const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      return await apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. We will get back to you soon.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
-    },
-    onError: () => {
-      toast({
-        title: "Error sending message",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    },
-  });
+  mutationFn: async (data: ContactFormData) => {
+    const formspreeEndpoint = `https://formspree.io/f/xpwlqkoa`; // e.g. "xyzabc"
+    const response = await fetch(formspreeEndpoint, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        service: data.service,
+        message: data.message,
+        // optionally add a honeypot field here to trap bots, e.g.:
+        // _gotcha: data._gotcha,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      // Formspree returns errors array or a single error
+      const errorMsg =
+        result.error ||
+        (Array.isArray(result.errors)
+          ? result.errors.map((e: any) => e.message).join(", ")
+          : "Failed to send message");
+      throw new Error(errorMsg);
+    }
+
+    return result; // could be used if needed
+  },
+  onSuccess: () => {
+    toast({
+      title: "Message sent successfully!",
+      description: "Thank you for your message. We will get back to you soon.",
+    });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
+  },
+  onError: (error: any) => {
+    toast({
+      title: "Error sending message",
+      description: error?.message || "Please try again later.",
+      variant: "destructive",
+    });
+  },
+});
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,14 +128,14 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Location",
-      details: ["Nairobi, Kenya", "East Africa"],
+      details: ["Kenrail Towers 7th Floor, Westlands", "Nairobi"],
       gradient: "from-primary/5 to-secondary/5",
       iconBg: "bg-primary",
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["+254 769 481 793"],
+      details: ["+254 769 481 793", "+254 705 976953"],
       gradient: "from-accent/5 to-yellow-300/5",
       iconBg: "bg-accent",
     },

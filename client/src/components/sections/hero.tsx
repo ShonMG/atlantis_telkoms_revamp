@@ -97,7 +97,7 @@ export default function Hero() {
               <Button
                 onClick={() => scrollToSection("contact")}
                 variant="outline"
-                className="glass-effect text-white border-white/20 px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+                className="glass-effect text-black border-white/20 px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
               >
                 <Calendar className="mr-2 h-4 w-4" />
                 Book Consultation
