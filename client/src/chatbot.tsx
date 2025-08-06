@@ -11,7 +11,7 @@ export const ChatBotWidget = () => {
     setMessages(prev => [...prev, `You: ${input}`]);
     // Simulate bot reply or call your bot backend here
     setTimeout(() => {
-      setMessages(prev => [...prev, `Bot: Thanks for asking! We'll get back to you soon.`]);
+      setMessages(prev => [...prev, `Atlantis Bot: Coming soon...`]);
     }, 500);
     setInput("");
   };

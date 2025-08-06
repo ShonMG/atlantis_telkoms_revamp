@@ -9,6 +9,8 @@ import brenda from "../images/brenda_mwaura.jpg";
 import charles from "../images/charles.jpg";
 import hansel from "../images/hansel_ndemange.jpg";
 import brian from "../images/limo_brian.jpg";
+import darlton from "../images/darlton.jpg";
+import shon from "../images/shon.jpg";
 
 
 export default function AboutPage() {
@@ -29,7 +31,7 @@ export default function AboutPage() {
       role: "Business Development & Operations Lead",
       image: brenda,
       description: "",
-      expertise: [""],
+      expertise: ["Brand Management", "Client Outreach", "Business Development"],
       gradient: "from-green-500/5 to-emerald-500/5",
       iconBg: "bg-green-500",
     },
@@ -45,7 +47,6 @@ export default function AboutPage() {
       name: "Brian Limo",
       role: "Software Developer",
       image: brian,
-      description: "",
       expertise: ["Fullstack", "Backend"],
       gradient: "from-purple-500/5 to-blue-500/5",
       iconBg: "bg-purple-500",
@@ -53,22 +54,27 @@ export default function AboutPage() {
     {
       name: "Charles Moruri",
       role: "ML Engineer",
-      Image: charles,
-      description:"",
+      image: charles,
       expertise: ["AI", "Python", "AWS"],
-      gradient: "",
+      gradient: "from-red-500/5 to-red-500/5",
       iconBg: "bg-red-500",
     },
     {
       name: "Gerishon Magachi",
       role: "Web Infrastructure & Digital Tools Analyst",
-      Image: "",
-      description:"",
-      expertise: ["Python", "React", "Typescript"],
+      image: shon,
+      expertise: ["Python", "Javascript", "React", "Typescript"],
       gradient: "from-blue-500/5 to-blue-500/5",
       iconBg: "bg-blue-500",
     },
-    
+    {
+      name: "Dalton Omondi",
+      role: "IoT & Electronics Lead",
+      image: darlton,
+      expertise: ["Machine Learning", "Computer Vision", "IoT devices - Raspberry Pi, Arduino"],
+      gradient: "from-gray-500/5 to-gray-500/5",
+      iconBg: "bg-gray-500",
+    },
   ];
 
   const containerVariants = {
