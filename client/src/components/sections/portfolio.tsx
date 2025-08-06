@@ -51,7 +51,7 @@ export default function Portfolio() {
     },
     {
       id: 5,
-      category: "ai",
+      category: "technology",
       title: "Charge 24 AI Analytics",
       description: ` AI Analytics for Smart Sensors &amp; Smart Screens AI-powered analytics transform ordinary sensors and digital screens into intelligent 
                     systems capable of real-time decision-making, predictive insights, and adaptive responses. This solution, deployed for Charge 24, enhances both environmental monitoring and user interaction.`,
@@ -104,7 +104,7 @@ export default function Portfolio() {
 
   const filters = [
     { id: "all", label: "All Projects" },
-    { id: "ai", label: "AI" },
+    { id: "technology", label: "Technology" },
     { id: "institutions", label: "Institutions" },
     { id: "saccos", label: "Saccos" },
     { id: "real_estate", label: "Real Estate"},
