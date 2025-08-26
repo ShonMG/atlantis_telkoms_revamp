@@ -1,9 +1,7 @@
 import { useState } from "react";
 
-
 export const ChatBotWidget = () => {
   const [open, setOpen] = useState(false);
-
 
   return (
     <div
@@ -18,8 +16,10 @@ export const ChatBotWidget = () => {
       {open ? (
         <div
           style={{
-            width: 400, 
-            height: 500, 
+            width: "90vw", // responsive width
+            maxWidth: 400,
+            height: "70vh", // responsive height
+            maxHeight: 500,
             boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
             borderRadius: 12,
             background: "#fff",
@@ -43,13 +43,13 @@ export const ChatBotWidget = () => {
                 background: "transparent",
                 border: "none",
                 cursor: "pointer",
+                fontSize: 18,
               }}
             >
               ×
             </button>
           </div>
-          {}
-          <div style={{ flex: 1, height: "calc(100% - 48px)" }}>
+          <div style={{ flex: 1 }}>
             <iframe
               src="https://copilotstudio.microsoft.com/environments/Default-84c31ca0-ac3b-4eae-ad11-519d80233e6f/bots/cr5be_atlantisBot/webchat?__version__=2"
               style={{
@@ -57,8 +57,7 @@ export const ChatBotWidget = () => {
                 height: "100%",
                 border: "none",
               }}
-             
-              frameBorder="0"
+              title="Atlantis Chatbot"
             />
           </div>
         </div>
