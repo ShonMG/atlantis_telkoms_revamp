@@ -107,4 +107,3 @@ The application uses a comprehensive set of reusable UI components including:
 - **Session Management**: PostgreSQL-backed sessions
 - **Static Files**: Served from built frontend in production
 
-The application is designed to be deployed on platforms that support Node.js with PostgreSQL databases, with particular optimization for Replit's environment including the cartographer plugin for development debugging.
